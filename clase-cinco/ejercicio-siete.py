@@ -14,8 +14,8 @@
 # def nota_final():
  
 calificacion = int(input('Ingrese calificación del examen (de 0 a 100): '))
-# if calificacion < 0 and calificacion > 100:
-#     print('El valor ingresado no es válido')
+if calificacion < 0 and calificacion > 100:
+    print('El valor ingresado no es válido')
 proyectos = int(input('Ingrese cantidad de proyectos entregados: '))
 
 if calificacion >= 90 or proyectos >= 10:

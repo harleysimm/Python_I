@@ -5,3 +5,5 @@
 texto = str(input('Ingrese un texto exclamativo (por ejemplo hola!): '))
 if texto.endswith('!'):
     print(texto[:-1])
+else:
+    print('Debes ingresar un texto con exclamación!!!')

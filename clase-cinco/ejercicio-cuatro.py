@@ -3,10 +3,8 @@
 # Por ejemplo: el mes 2 (febrero), forma parte del primer trimestre; el mes 6 (junio), 
 # forma parte del segundo trimestre; y el mes 11 (noviembre), forma parte del cuarto trimestre.}
 
-# Se pide el mes 
+# Se pide el mes
 mes = int(input('Ingrese el mes a consultar (como número del 1 al 12) : '))
-if 1 > mes > 12:
-    print('El valor ingresado no es válido')
 
 # # Se devuelve el trimestre correspondiente al mes 
 if mes >= 1 and mes <= 3:
@@ -17,3 +15,5 @@ elif mes > 6 and mes <= 9:
     print('Corresponde al trimestre 3')
 elif mes > 9 and mes <= 12:
     print('Corresponde al trimestre 4')
+else:
+    print('El valor ingresado no es válido')

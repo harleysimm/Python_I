@@ -36,8 +36,8 @@ def calcular_agua():
 
     # Calculamos la cantidad de agua necesaria
     agua_base = cantidad_maxima[tipo_tela] * 1.1 ** (cantidad - capacidad)
-    agua_total = agua_base * cantidad / capacidad
+    agua_total = (agua_base * cantidad) / capacidad
 
-    return f"Para lavar {cantidad} prendas de {tipo_tela} en una lavadora de {capacidad} kg, se necesitan {agua_total} litros de agua"
+    return print (f"Para lavar {cantidad} prendas de {tipo_tela} en una lavadora de 10 kg, se necesitan {agua_total} litros de agua")
 
-    calcular_agua()
+calcular_agua()

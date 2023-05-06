@@ -23,12 +23,10 @@ class Micro():
             'niño': 0
         })
 
-    def ingreso_pasajero(self, tipo_pasajero, patente):
+    def ingreso_buses(self, patente): #guardar cada micro
         self.patentes.append({
             'patente': patente,
-            'tipo_pasajero': tipo_pasajero,
             'correlativo_mvto': 1,
-            'tarifa': self.tipo_pasajero[tipo_pasajero]
         })
 
     def agregar_ingresos_for(self, patente, tipo_pasajero):
@@ -43,7 +41,7 @@ class Micro():
                     'valor_pago': movimiento['tarifa']
                 })
                 movimiento['valor_pago'] = movimiento['tarifa']
-                movimiento['correlativo_mvto'] = movimiento ['correlativo_mvto'] +1
+                movimiento['correlativo_mvto'] = movimiento ['correlativo_mvto'] +1 # correlativo de la patente
                 break
 
     def reporte_diario(self, patente):
@@ -78,15 +76,10 @@ class Micro():
 
 Recorrido_uno = Micro()
 
-Recorrido_uno.ingreso_pasajero('adulto', 'FLXV33')
-Recorrido_uno.ingreso_pasajero('adulto mayor', 'FLXV33')
-Recorrido_uno.ingreso_pasajero('niño', 'FLXV33')
-Recorrido_uno.ingreso_pasajero('adulto', 'FLXV49')
-Recorrido_uno.ingreso_pasajero('adulto mayor', 'FLXV49')
-Recorrido_uno.ingreso_pasajero('niño', 'FLXV49')
-Recorrido_uno.ingreso_pasajero('adulto', 'FLXV87')
-Recorrido_uno.ingreso_pasajero('adulto mayor', 'FLXV87')
-Recorrido_uno.ingreso_pasajero('niño', 'FLXV87')
+
+Recorrido_uno.ingreso_buses('FLXV33')
+Recorrido_uno.ingreso_buses('FLXV49')
+Recorrido_uno.ingreso_buses('FLXV87')
 
 Recorrido_uno.agregar_ingresos_for('FLXV33', 'adulto')
 Recorrido_uno.agregar_ingresos_for('FLXV33', 'adulto mayor')
